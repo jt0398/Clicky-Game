@@ -1,37 +1,49 @@
 [{
     "id": 1,
-    "image": "images/aragorn.jpg"
+    "image": "images/aragorn.jpg",
+    "clicked": false
 }, {
     "id": 2,
-    "image": "images/arwen.jpg"
+    "image": "images/arwen.jpg",
+    "clicked": false
 }, {
     "id": 3,
-    "image": "images/frodo.png"
+    "image": "images/frodo.png",
+    "clicked": false
 }, {
     "id": 4,
-    "image": "images/gandalf.jpg"
+    "image": "images/gandalf.jpg",
+    "clicked": false
 }, {
     "id": 5,
-    "image": "images/gimli.png"
+    "image": "images/gimli.png",
+    "clicked": false
 }, {
     "id": 6,
-    "image": "images/gollum.jpg"
+    "image": "images/gollum.jpg",
+    "clicked": false
 }, {
     "id": 7,
-    "image": "images/legolas.png"
+    "image": "images/legolas.png",
+    "clicked": false
 }, {
     "id": 8,
-    "image": "images/merry.jpg"
+    "image": "images/merry.jpg",
+    "clicked": false
 }, {
     "id": 9,
-    "image": "images/pippin.jpg"
+    "image": "images/pippin.jpg",
+    "clicked": false
 }, {
     "id": 10,
-    "image": "images/samwise.jpg"
+    "image": "images/samwise.jpg",
+    "clicked": false
 }, {
     "id": 11,
-    "image": "images/sauron.jpg"
+    "image": "images/sauron.jpg",
+    "clicked": false
 }, {
     "id": 12,
-    "image": "images/witchking.png"
+    "image": "images/witchking.png",
+    "clicked": false
 }]
