@@ -1,26 +1,29 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Nav from "./components/Nav";
+import characters from "./lotr.json";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  state = {
+    score: 0,
+    topScore: 0,
+    message: "Click an image to begin"
+  };
+
+  componentDidMount() {
+    console.log(characters);
+  }
+
+  render() {
+    return (
+      <div>
+        <Nav
+          message={this.state.message}
+          score={this.state.score}
+          topScore={this.state.topScore}
+        />
+      </div>
+    );
+  }
 }
 
 export default App;
