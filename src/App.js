@@ -8,12 +8,27 @@ class App extends React.Component {
   state = {
     score: 0,
     topScore: 0,
-    message: "Click an image to begin",
+    message: "",
     sortedCharacters: []
   };
 
-  handleCharClick = event => {
-    console.log(event.target.name);
+  handleCharClick = id => {
+    if (characters[id - 1].clicked) {
+      let topScore = this.state.topScore;
+
+      if (this.state.score > topScore) {
+        topScore = this.state.score;
+      }
+
+      this.setState({ message: "incorrectly", score: 0, topScore: topScore });
+    } else {
+      characters[id - 1].clicked = true;
+      this.setState((prevState, props) => {
+        return { score: prevState.score + 1, message: "correctly" };
+      });
+    }
+
+    this.loadCharacters();
   };
 
   loadCharacters = () => {
@@ -21,6 +36,9 @@ class App extends React.Component {
     let characterList = [];
 
     for (let i = 0; i < 12; i++) {
+      if (this.state.score === 0) {
+        characters[i].clicked = false;
+      }
       ids.push(i);
     }
 
@@ -51,8 +69,9 @@ class App extends React.Component {
               return (
                 <CharacterCard
                   key={character.id}
-                  {...character}
-                  onClick={this.handleCharClick}
+                  id={character.id}
+                  image={character.image}
+                  onClick={() => this.handleCharClick(character.id)}
                 />
               );
             })}
