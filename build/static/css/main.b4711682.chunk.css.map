@@ -1,1 +1,0 @@
-{"version":3,"sources":["style.css"],"names":[],"mappings":"AAAA,UACE,oBAAuB,CACvB,gBAAiB,CACjB,iBACF,CAJA,gBAEE,cACF,CAEA,cACE,0BACF,CAPA,MACE,cAAe,CACf,uBACF","file":"main.b4711682.chunk.css","sourcesContent":[".card {\n  cursor: pointer;\n  width: 12.5rem !important;\n}\n"]}
